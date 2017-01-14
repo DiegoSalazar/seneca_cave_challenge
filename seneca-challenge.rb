@@ -126,6 +126,6 @@ if $0 == __FILE__
   else
     File.read ARGV[0]
   end
-  challenges = JSON.parse Base64.decode64 encoded
+  challenges = JSON.parse Base64.decode64 "#{encoded}"
   puts Spelunker.new(challenges).solve
 end
