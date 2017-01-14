@@ -193,7 +193,7 @@ Once base64-decoded, the challenge value is an array of objects with the followi
 
 ## Endgame
 
-Once you've POSTed /attempts/finish to the server, just email nick@seneca.systems
+Once you've POSTed /attempts/finish to the server, just email *********
 to let us know to review your solution! You may start many attempts on the same email
 address, but we'll only count your first `finish` for the purposes of passing the
 exercise.
