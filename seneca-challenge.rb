@@ -62,7 +62,7 @@ class Cave
     @tiles = @current_tile.reachable_neighbors @grid, @width, @height, @visited
     return solution if @tiles.none?
 
-    @visited << @current_tile = most_valuable_tile
+    @visited << @current_tile = best_tile
     @moves << @current_tile.move
     @multiplier += 1 if @current_tile.has_pickaxe?
     @score += @multiplier * @current_tile.score
@@ -76,7 +76,7 @@ class Cave
     { moves: @moves.join, score: @score }
   end
 
-  def most_valuable_tile
+  def best_tile
     @tiles.find &:has_pickaxe? or @tiles.max_by &:score
   end
 
