@@ -1,6 +1,6 @@
 # Seneca Cave Challenge
 
-This repo houses my solution to the challenge described below.
+This repo houses my solution to the Seneca Systems cave challenge.
 
 The solution script was submitted by the following bash command:
 
