@@ -58,4 +58,4 @@ TEXT
 challenges = JSON.parse Base64.decode64(challenge_encoded)
 
 puts Cave.new(cave1, 10).solve if ARGV[0].nil? || ARGV[0] == 'cave'
-puts Spelunker.new(challenges).solve if ARGV[0] == 'spelunk'
+puts Spelunker.new.solve challenges if ARGV[0] == 'spelunk'
