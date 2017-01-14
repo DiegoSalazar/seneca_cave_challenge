@@ -58,7 +58,6 @@ class Cave
   end
 
   def solve
-    binding.pry if @grid.nil? # debug
     @tiles = @current_tile.reachable_neighbors @grid, @width, @height, @visited
     return solution if @tiles.none?
 
