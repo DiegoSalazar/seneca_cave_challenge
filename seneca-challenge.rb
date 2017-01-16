@@ -52,7 +52,7 @@ class Cave
 
   def initialize(grid, max_moves)
     @grid, @max_moves = grid, max_moves
-    @moves, @pickaxes, @score = [], 0, 0
+    @moves, @multiplier, @score = [], 0, 0
     @width, @height = @grid.first.size, @grid.size
     @current_tile = Tile.new start_tile_index, start_row_index
     @visited = [@current_tile]
@@ -64,8 +64,8 @@ class Cave
 
     @visited << @current_tile = best_tile
     @moves << @current_tile.move
-    @pickaxes += 1 if @current_tile.has_pickaxe?
-    @score += @current_tile.score * 2 ** @pickaxes.size
+    @multiplier += 1 if @current_tile.has_pickaxe?
+    @score += @current_tile.score * 2 ** @multiplier
 
     @moves.size == @max_moves ? solution : solve
   end
